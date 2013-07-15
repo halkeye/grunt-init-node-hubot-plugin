@@ -3,25 +3,15 @@
 {%= description %}
 
 ## Getting Started
-Install the module with: `npm install {%= name %}`
+1. Install the module: `npm install --save {%= name %}`
+2. Add it `{%= name %}` to your external-scripts.json file in your hubot directory
 
-```javascript
-var {%= js_safe_name %} = require('{%= name %}');
-{%= js_safe_name %}.awesome(); // "awesome"
-```
-
-## Documentation
+## Configuration
 _(Coming soon)_
-
-## Examples
-_(Coming soon)_
-
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
 _(Nothing yet)_
 
 ## License
-Copyright (c) {%= grunt.template.today('yyyy') %} {%= author_name %}  
+Copyright (c) {%= grunt.template.today('yyyy') %} {%= author_name %}
 Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.

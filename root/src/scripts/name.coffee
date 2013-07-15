@@ -1,14 +1,23 @@
-###
-
-{%= name %}
-{%= homepage %}
-
-Copyright (c) {%= grunt.template.today('yyyy') %} {%= author_name %}
-Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.
-
-###
+# Description:
+#   {%= description %}
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   None
+#
+# Notes:
+#   Copyright (c) {%= grunt.template.today('yyyy') %} {%= author_name %}
+#   Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.
+#
+# Author:
+#   halkeye
 
 'use strict'
 
-exports.awesome = ()->
-  'awesome'
+module.exports = (robot) ->
+

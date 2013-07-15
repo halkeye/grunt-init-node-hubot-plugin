@@ -29,7 +29,7 @@ exports.warnOn = '*';
 // The actual init template.
 exports.template = function(grunt, init, done) {
 
-  init.process({type: 'node-coffee'}, [
+  init.process({type: 'node-hubot-plugin'}, [
     // Prompt for these values.
     init.prompt('name'),
     init.prompt('description'),
@@ -43,11 +43,11 @@ exports.template = function(grunt, init, done) {
     init.prompt('author_url'),
     init.prompt('node_version'),
     init.prompt('main', function(value, data, done) {
-      done(null, 'out/scripts/' + data.name);
+      done(null, 'src/scripts/' + data.name);
     }),
     init.prompt('npm_test', 'grunt simplemocha')
   ], function(err, props) {
-    props.keywords = [];
+    props.keywords = ["hubot"];
     props.devDependencies = {
       'grunt-contrib-jshint': '~0.4.3',
       'grunt-contrib-watch': '~0.4.0',
