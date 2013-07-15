@@ -43,7 +43,7 @@ exports.template = function(grunt, init, done) {
     init.prompt('author_url'),
     init.prompt('node_version'),
     init.prompt('main', function(value, data, done) {
-      done(null, 'out/lib/' + data.name);
+      done(null, 'out/scripts/' + data.name);
     }),
     init.prompt('npm_test', 'grunt simplemocha')
   ], function(err, props) {
