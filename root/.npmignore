@@ -6,6 +6,3 @@ grunt.coffee
 grunt.js
 
 src/
-out/demo/
-out/test/
-out/vendor/
