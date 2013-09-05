@@ -1,6 +1,14 @@
 'use strict'
 
-{%= js_test_safe_name %} = require('../scripts/{%= name %}.js')
+Hubot = require('hubot')
+Path = require('path')
+request = require('supertest')
+sinon = require('sinon')
+
+adapterPath = Path.join Path.dirname(require.resolve 'hubot'), "src", "adapters"
+robot = Hubot.loadBot adapterPath, "shell", "true", "MochaHubot"
+
+{%= js_test_safe_name %} = require('../scripts/{%= name %}')(robot)
 
 ###
 ======== A Handy Little Mocha Reference ========
@@ -52,9 +60,9 @@ Should assertions:
   user.should.be.a('object').and.have.property('name', 'tj')
 ###
 
-describe 'Awesome', ()->
-  describe '#of()', ()->
+describe '{%= js_test_safe_name %}', ()->
+  describe '#exist()', ()->
 
-    it 'awesome', ()->
-      {%= js_test_safe_name %}.awesome().should.eql('awesome')
+    it 'should', ()->
+      {%= js_test_safe_name %}.should.exist()
 
