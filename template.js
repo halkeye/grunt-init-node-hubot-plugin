@@ -49,11 +49,8 @@ exports.template = function(grunt, init, done) {
   ], function(err, props) {
     props.keywords = ["hubot"];
     props.devDependencies = {
-      'grunt-contrib-jshint': '~0.4.3',
       'grunt-contrib-watch': '~0.4.0',
-      'grunt-contrib-coffee': '~0.7.0',
       'grunt-contrib-clean': '~0.4.1',
-      'grunt-contrib-copy': '~0.4.1',
       'grunt-coffeelint': '~0.0.6',
       'grunt-simple-mocha': '~0.4.0',
       'should': '~1.2.2',
