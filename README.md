@@ -4,7 +4,7 @@
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
 [Coffeescript]: http://coffeescript.org/
-[Mocha]: http://visionmedia.github.com/mocha/
+[Mocha]: http://mochajs.org/
 
 ## Installation
 If you haven't already done so, install [grunt-init][].
